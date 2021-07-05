@@ -1,10 +1,13 @@
 <template>
   <div id="app">
-    <avue-form-design style="height: 100vh;"
-                      :options="options"
-                      @submit="handleSubmit"
-                      :custom-fields="customFields"
-                      :default-values="defaultValues"></avue-form-design>
+    <avue-form-design
+      style="height: 100vh;"
+      :options="options"
+      @submit="handleSubmit"
+      :custom-fields="customFields"
+      :toolbar="['avue-doc', 'import', 'generate', 'preview', 'clear']"
+      :default-values="defaultValues"
+    ></avue-form-design>
   </div>
 </template>
 
@@ -39,6 +42,24 @@ export default {
               title: '警告警告警告警告',
               type: 'success'
             },
+            event: {
+              close: () => {
+                console.log('alert关闭事件')
+              }
+            }
+          },
+          {
+            title: '员工选择',
+            component: 'el-select',
+            label: '员工选择',
+            labelWidth: '100px',
+            span: 24,
+            icon: 'el-icon-warning',
+            tips: '看我：自定义事件怎么用？',
+            // params: {
+            //   title: '警告警告警告警告',
+            //   type: 'success'
+            // },
             event: {
               close: () => {
                 console.log('alert关闭事件')
