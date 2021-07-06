@@ -9,7 +9,7 @@
         <el-collapse-item name="1"
                           title="基本属性">
           <el-form-item label="类型"
-                        v-if="data.type && !data.component">
+                        v-if="data.type && !data.component && !data.systemField">
             <el-select v-model="data.type"
                        style="width:100%;"
                        placeholder="请选择类型"

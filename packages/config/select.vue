@@ -34,7 +34,7 @@
                           clearable
                           v-model="item.value"
                           placeholder="value"></el-input>
-                <el-input v-if="data.type == 'select'" 
+                <el-input v-if="data.type == 'select'"
                           size="mini"
                           clearable
                           v-model="item.desc"

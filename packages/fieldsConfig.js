@@ -39,6 +39,81 @@ export default [
       value: '标题',
     }]
   },
+
+
+
+
+  {
+    title: '系统字段',
+    list: [{
+      type: 'select',
+      label: '成员单选',
+      icon: 'icon-select',
+      dicData: [
+        { label: '选项一', value: '0' },
+        { label: '选项二', value: '1' },
+        { label: '选项三', value: '2' },
+      ],
+      // 用于做级联配置
+      cascaderItem: [],
+      span: 24,
+      display: true,
+      dicOption: 'static',
+      props: {
+        label: 'label',
+        value: 'value'
+      },
+      systemField: true
+    },{
+      type: 'select',
+      label: '成员单选(远程)',
+      cascaderItem: [],
+      span: 24,
+      display: true,
+      props: {
+        label: 'label',
+        value: 'value'
+      },
+      prop: '1625584096879_20989',
+      dicUrl: 'https://www.baidu.com',
+      dicMethod: 'get',
+      dicOption: 'remote',
+      systemField: true
+    }, {
+      type: 'cascader',
+      label: '部门单选',
+      icon: 'icon-link',
+      span: 24,
+      display: true,
+      dicData: [
+        {
+          label: '选项一',
+          value: 0,
+          children: [{
+            label: '选项1-1',
+            value: 11,
+          }, {
+            label: '选项1-2',
+            value: 12,
+          }]
+        },
+        { label: '选项二', value: '1' },
+        { label: '选项三', value: '2' },
+      ],
+      cascaderIndex: 1,
+      showAllLevels: true,
+      dicOption: 'static',
+      separator: "/",
+      props: {
+        label: 'label',
+        value: 'value'
+      }
+    }]
+  },
+
+
+
+
   {
     title: '输入字段',
     list: [{
